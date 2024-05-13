@@ -1,5 +1,5 @@
 PODS:
-  - Products (0.1.0)
+  - Products (1.0.0)
 
 DEPENDENCIES:
   - Products (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Products: 34e79ac765a38e4a3c5261218c15ae55f46ce72d
+  Products: 4e5a7f67dedef4830cdcc1b3baed7ad77fda2011
 
 PODFILE CHECKSUM: 7fae8f47a8740e7610be4ce919563d94512168a5
 
