@@ -1,0 +1,6 @@
+framework module Products {
+  umbrella header "Products-umbrella.h"
+
+  export *
+  module * { export * }
+}

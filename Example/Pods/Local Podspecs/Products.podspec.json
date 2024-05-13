@@ -1,0 +1,22 @@
+{
+  "name": "Products",
+  "version": "0.1.0",
+  "summary": "A short description of Products.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pradeephcl/Products",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pradeephcl": "kumarprad@hcl.com"
+  },
+  "source": {
+    "git": "https://github.com/pradeephcl/Products.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Products/Classes/**/*"
+}
