@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         let productView = Products.ProductListView(userName: "")
         let hostView = UIHostingController(rootView: productView)
         self.navigationController?.pushViewController(hostView, animated: true)
+        self.navigationController?.isNavigationBarHidden = true
     }
 }
 

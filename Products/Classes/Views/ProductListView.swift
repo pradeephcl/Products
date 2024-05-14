@@ -14,7 +14,7 @@ public struct ProductListView: View {
         _viewModel = StateObject(wrappedValue: ProductListViewModel(userName: userName))
     }
     
-   public var body: some View {
+    public var body: some View {
         ZStack {
             NavigationStack{
                 List(self.viewModel.productlist, id: \.self) { data in
@@ -28,21 +28,21 @@ public struct ProductListView: View {
                     .refreshable {
                         viewModel.getProductList(true, success: {_ in })
                     }
+                    .navigationDestination(isPresented: $viewModel.selection) {
+                        ProductDetailView(selectedProduct: viewModel.selectedProduct)}
+                    .navigationBarTitle(AppConstants.products, displayMode: .inline)
+                    .navigationBarBackButtonHidden(true)
             }
-            .alert(isPresented: $viewModel.showAlert, content: {
-                Alert(title: Text(AppConstants.alert),
-                             message: Text(viewModel.alertMessage))
-            })
-            .navigationDestination(isPresented: $viewModel.selection) {
-                ProductDetailView(selectedProduct: viewModel.selectedProduct)}
-            .navigationBarTitle(AppConstants.products, displayMode: .inline)
-            .navigationBarBackButtonHidden(true)
-            .onAppear() {
-                viewModel.getProductList( success: { _ in })
-            }
-            if viewModel.showLoader {
-                ProgressView(AppConstants.loading)
-            }
+        }
+        .alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Text(AppConstants.alert),
+                  message: Text(viewModel.alertMessage))
+        })
+        .onAppear() {
+            viewModel.getProductList( success: { _ in })
+        }
+        if viewModel.showLoader {
+            ProgressView(AppConstants.loading)
         }
     }
 }
