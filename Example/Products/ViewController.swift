@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import SwiftUI
+import Products
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("HI")
         // Do any additional setup after loading the view, typically from a nib.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func button(_ sender: Any) {
+        let productView = Products.ProductListView(userName: "")
+        let hostView = UIHostingController(rootView: productView)
+        self.navigationController?.pushViewController(hostView, animated: true)
+    }
 }
 
