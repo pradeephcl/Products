@@ -21,7 +21,8 @@ struct productImageView: View {
                 returnedImage
                     .resizable()
                     .scaledToFit()
-                    .cornerRadius(15)
+                    .frame(width: width, height: height)
+                    .cornerRadius(5)
             case .failure:
                 Image(systemName: "questionmark")
                     .font(.headline)

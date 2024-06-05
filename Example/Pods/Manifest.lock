@@ -1,15 +1,22 @@
 PODS:
-  - Products (1.0.0)
+  - NetwokingTest (1.0.0)
+  - Products (1.0.0):
+    - NetwokingTest
 
 DEPENDENCIES:
   - Products (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - NetwokingTest
 
 EXTERNAL SOURCES:
   Products:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Products: 0e39d1b79393b672fb99199a6ebe07c5e3c3ca77
+  NetwokingTest: 0f174c20fe2e7fa9bcb33e013cada91db01ea7c3
+  Products: b93950f1d8960b740cdef47d266217ff860d43d3
 
 PODFILE CHECKSUM: 8653f77c75d424f7739398f27c1d9de53d08e7eb
 

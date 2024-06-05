@@ -21,10 +21,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func button(_ sender: Any) {
-        let productView = Products.ProductListView(userName: "")
+        let productView = Products.ProductListView<LaunchManager, Any>(userName: "")
         let hostView = UIHostingController(rootView: productView)
         self.navigationController?.pushViewController(hostView, animated: true)
         self.navigationController?.isNavigationBarHidden = true
     }
 }
 
+struct LaunchManager: ProductManagerDelegate {
+    func dismissProductsView() {
+    }
+}

@@ -291,10 +291,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Products_Example/Pods-Products_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NetwokingTest/NetwokingTest.framework",
 				"${BUILT_PRODUCTS_DIR}/Products/Products.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NetwokingTest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Products.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

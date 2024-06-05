@@ -20,5 +20,10 @@
   },
   "swift_versions": "5.0",
   "source_files": "Products/Classes/**/*",
+  "dependencies": {
+    "NetwokingTest": [
+
+    ]
+  },
   "swift_version": "5.0"
 }

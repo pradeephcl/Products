@@ -8,32 +8,18 @@
 import Foundation
 
 class AppConstants {
-    // Login View constants
-    static let email = "Email"
-    static let password = "Password"
-    static let login = "Login"
-    static let loginHeader = "Enter your email address and password"
-    static let emptyEmail = "Email address can't be empty"
-    static let invalidEmail = "Please enter valid email address"
-    static let emptyPassword = "Password can't be empty"
-    static let invalidPassword = "Password must be minmum 6 character long"
-    static let incorrectEmailPassword = "Incorrect email or password"
-    static let userNotExist = "User doesn't exist, do you want to register and proceed"
-    
     // Product List constants
     static let products = "Products"
     static let loading = "Loading..."
-    static let productName = "Product Name"
+    static let salesRanking = "Sales Ranking"
+    static let rating = "Rating"
     
     // Product Detail constants
+    static let publisher = "Publisher"
     static let price = "Price"
-    static let currency = "$"
     static let description = "Description"
-    static let storageOptions = "Storage Options"
-    static let colorOptions = "Color Options"
     
     // image assets
-    static let placeHolder = "placeHolderLarge"
     static let questionmark = "questionmark"
     
     // common constants
@@ -42,7 +28,7 @@ class AppConstants {
     static let dateFormat = "yyyy-MM-dd HH:mm:ss"
     
     //API URLS
-    static var productListUrl = "https://dummyapi.online/api/products"
+    static var productListUrl = "https://www.jsonkeeper.com/b/E7L4"
 }
 
 enum AlertType {

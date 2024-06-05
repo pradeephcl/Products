@@ -1,0 +1,6 @@
+framework module NetwokingTest {
+  umbrella header "NetwokingTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

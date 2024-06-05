@@ -6,12 +6,12 @@
 //
 
 import Foundation
-class NetworkManager {
-    static let shared = NetworkManager()
+public class NetworkManager {
+    public static let shared = NetworkManager()
     
     private init(){}
     // func to handle get request
-    func getData<T: Codable>(url: URL?,
+    public func getData<T: Codable>(url: URL?,
                              expecting: T.Type,
                              completion: @escaping (Result<T, Error>) -> Void) {
         guard let url = url else {
@@ -35,4 +35,20 @@ class NetworkManager {
         }
         task.resume()
     }
+}
+
+public enum CustomError: Error {
+    case invalidUrl
+    case fileNotFound
+    case dataInitialisation(error: Error)
+    case decoding(error: Error)
+    
+    public var localizedDescription: String {
+        switch self {
+        case .invalidUrl:
+          return NSLocalizedString("Invalid URL", comment: "My error")
+        default:
+          return NSLocalizedString("Unknown Error", comment: "My error")
+        }
+      }
 }

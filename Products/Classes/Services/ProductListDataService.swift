@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetwokingTest
 
 protocol ProductListDataServiceProtocol {
     func getProductListData(success: @escaping ([ProductInfo]) -> Void, failure: @escaping (Error) -> Void)
